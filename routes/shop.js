@@ -9,7 +9,15 @@ router.get('/',(req, res, next)=>{
     // res.sendFile(path.join(__dirname, '../', 'views', 'shop.html'));
     // res.sendFile(path.join(rootDir, 'views', 'shop.html'));
     const product = adminData.product;
-    res.render('shop',{prods:product, docTitle: 'Shop', path:'/'});
+    // res.render('shop',{prods:product, docTitle: 'Shop', path:'/'});
+    res.render('shop', {
+        prods: product,
+        pageTitle: 'Shop',
+        path: '/',
+        hasProducts: product.length > 0,
+        activeShop: true,
+        productCSS: true
+    });
 
 })
 
