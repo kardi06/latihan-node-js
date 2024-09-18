@@ -11,7 +11,7 @@ const errorController = require('./controllers/error');
 // console.log(routes.someText);
 const app = express();
 
-app.set('view engine', 'pug');
+app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 app.use(bodyParser.urlencoded({extended: false}));
